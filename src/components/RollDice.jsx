@@ -21,10 +21,31 @@ const DiceContainer = styled.div`
 
   .dice {
     cursor: pointer;
+    img {
+      max-width: 100%; // Ensure image is not larger than the container
+      height: auto;
+    }
   }
 
   p {
     font-size: 24px;
     font-weight: 500;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 16px;
+    }
+  }
+
+  // Adjust margin for smaller screens
+  @media (max-width: 768px) {
+    margin-top: 24px;
+  }
+
+  @media (max-width: 480px) {
+    margin-top: 16px;
   }
 `;
